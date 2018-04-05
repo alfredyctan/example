@@ -1,0 +1,34 @@
+ribbon:
+  eureka:
+    enabled: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 100000
+zuul:
+  addProxyHeaders: false # disable zuul create x-forward-??? header
+  ignoredServices: '*' # we want to control what can be access from external, otherwise, all internal services will be exposed to public 
+  host:
+    connect-timeout-millis: 50000
+    socket-timeout-millis: 100000
+  routes:
+    ccs-login:
+      path: /ccs/api/v1/auth/login/**
+      stripPrefix: false 
+      serviceId: ccs
+      secure: false
+
+    ccs-refresh:
+      path: /ccs/api/v1/auth/refresh/**
+      stripPrefix: false 
+      serviceId: ccs
+      secure: false
+
+    ccs:
+      path: /ccs/api/v1/**
+      stripPrefix: false 
+      serviceId: auth

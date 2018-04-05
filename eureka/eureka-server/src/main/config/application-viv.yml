@@ -1,0 +1,79 @@
+spring:
+  profiles: viv
+eureka:
+  environment: viv
+  server:
+    renewalPercentThreshold: 0.85 # the threshold in ratio of received heartbeat before the self preservation mode is ON
+
+---
+spring:
+  profiles: lv1
+server:
+  host: ${eureka.lv1.host}
+  port: ${eureka.lv1.port}
+  servlet:
+    contextPath: /${eureka.lv1.context}
+
+---
+spring:
+  profiles: lv2
+server:
+  host: ${eureka.lv2.host}
+  port: ${eureka.lv2.port}
+  servlet:
+    contextPath: /${eureka.lv2.context}
+
+---
+spring:
+  profiles: lv3
+server:
+  host: ${eureka.lv3.host}
+  port: ${eureka.lv3.port}
+  servlet:
+    contextPath: /${eureka.lv3.context}
+
+---
+spring:
+  profiles: lv4
+server:
+  host: ${eureka.lv4.host}
+  port: ${eureka.lv4.port}
+  servlet:
+    contextPath: /${eureka.lv4.context}
+
+---
+spring:
+  profiles: dr1
+server:
+  host: ${eureka.dr1.host}
+  port: ${eureka.dr1.port}
+  servlet:
+    contextPath: /${eureka.dr1.context}
+
+---
+spring:
+  profiles: dr2
+server:
+  host: ${eureka.dr2.host}
+  port: ${eureka.dr2.port}
+  servlet:
+    contextPath: /${eureka.dr.context}
+
+---
+spring:
+  profiles: dr3
+server:
+  host: ${eureka.dr3.host}
+  port: ${eureka.dr3.port}
+  servlet:
+    contextPath: /${eureka.dr3.context}
+
+---
+spring:
+  profiles: dr4
+server:
+  host: ${eureka.dr4.host}
+  port: ${eureka.dr4.port}
+  servlet:
+    contextPath: /${eureka.dr4.context}
+  

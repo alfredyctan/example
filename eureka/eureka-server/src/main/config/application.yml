@@ -1,0 +1,8 @@
+eureka:
+  datacenter: afc
+  shouldBatchReplication: true
+  server:
+    enableSelfPreservation: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: false

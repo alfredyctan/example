@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>yaml</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<parent>
+		<groupId>org.afc</groupId>
+		<artifactId>afc-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<scm>
+		<url>https://github.com/alfredyctan/example</url>
+		<connection>scm:git:ssh://git@github.com:alfredyctan/example.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com:alfredyctan/example.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+		</dependency>
+	</dependencies>
+</project>

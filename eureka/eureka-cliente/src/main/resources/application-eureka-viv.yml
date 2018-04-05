@@ -1,0 +1,53 @@
+spring.profiles: eureka-viv
+spring.profiles.include:
+  - eureka
+
+eureka:
+  enlvronment: viv
+  client:
+    serlvceUrl:
+      lv-default: > 
+        http://${eureka.lv1.host}:${eureka.lv1.port}/${eureka.lv1.context}/eureka/,
+        http://${eureka.lv2.host}:${eureka.lv2.port}/${eureka.lv2.context}/eureka/,
+        http://${eureka.lv3.host}:${eureka.lv3.port}/${eureka.lv3.context}/eureka/,
+        http://${eureka.lv4.host}:${eureka.lv4.port}/${eureka.lv4.context}/eureka/
+      dr-default: >
+        http://${eureka.dr1.host}:${eureka.dr1.port}/${eureka.dr1.context}/eureka/,
+        http://${eureka.dr2.host}:${eureka.dr2.port}/${eureka.dr2.context}/eureka/,
+        http://${eureka.dr3.host}:${eureka.dr3.port}/${eureka.dr3.context}/eureka/,
+        http://${eureka.dr4.host}:${eureka.dr4.port}/${eureka.dr4.context}/eureka/
+
+  #diff port number export on host level for non-docker registration        
+  lv1:
+    host: lv-lan1
+    port: 20001 
+    context: eureka/lv1
+  lv2:
+    host: lv-lan2
+    port: 20002
+    context: eureka/lv2
+  lv3:
+    host: lv-lan1
+    port: 20003
+    context: eureka/lv3
+  lv4:
+    host: lv-lan2
+    port: 20004
+    context: eureka/lv4
+  dr1:
+    host: dr-lan1
+    port: 20001
+    context: eureka/dr1
+  dr2:
+    host: dr-lan2
+    port: 20002
+    context: eureka/dr2
+  dr3:
+    host: dr-lan1
+    port: 20003
+    context: eureka/dr3
+  dr4:
+    host: dr-lan2
+    port: 20004
+    context: eureka/dr4
+    

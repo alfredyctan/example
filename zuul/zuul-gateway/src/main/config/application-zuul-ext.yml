@@ -1,0 +1,10 @@
+spring:
+  profiles: zuul-ext
+
+zuul:
+  routes:
+    petstore:
+      path: /petstore/**
+      stripPrefix: false 
+      serviceId: petstore
+      

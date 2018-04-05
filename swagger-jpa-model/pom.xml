@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>swagger-jpa-model</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<parent>
+		<groupId>org.afc</groupId>
+		<artifactId>afc-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<scm>
+		<url>https://github.com/alfredyctan/example</url>
+		<connection>scm:git:ssh://git@github.com:alfredyctan/example.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com:alfredyctan/example.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+	<properties>
+		<swagger.specification.groupId>org.afc</swagger.specification.groupId>
+		<swagger.specification.artifactId>swagger-jpa-model-api</swagger.specification.artifactId>
+		<swagger.specification.version>1.0.0-SNAPSHOT</swagger.specification.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.afc</groupId>
+			<artifactId>swagger-jpa-model-api</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.afc</groupId>
+			<artifactId>afc-swagger-service</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+			<type>pom</type>
+		</dependency>
+	</dependencies>
+</project>

@@ -1,0 +1,3 @@
+<included>
+	<logger name="org.apache.http.wire" level="INFO" />
+</included>

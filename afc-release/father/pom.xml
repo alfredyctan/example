@@ -1,0 +1,18 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>father</artifactId>
+	<version>1.0.4-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<parent>
+		<groupId>org.afc</groupId>
+		<artifactId>grandma</artifactId>
+		<version>1.0.5-SNAPSHOT</version>
+		<relativePath>../grandma</relativePath>
+	</parent>
+	<scm>
+		<url>https://github.com/alfredyctan/test</url>
+		<connection>scm:git:https://github.com/alfredyctan/afc-release.git</connection>
+		<developerConnection>scm:git:https://github.com/alfredyctan/afc-release.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+</project>

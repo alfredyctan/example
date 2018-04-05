@@ -1,0 +1,16 @@
+spring:
+  profiles: local
+
+---
+spring:
+  profiles: lv1
+server:
+  host: localhost
+  port: 20101
+  
+---
+spring:
+  profiles: dr1
+server:
+  host: localhost
+  port: 20111

@@ -1,0 +1,6 @@
+DROP TABLE UserGroup IF EXISTS;
+
+CREATE TABLE UserGroup (  
+	id     INTEGER PRIMARY KEY,  
+	name   VARCHAR(30)  
+);

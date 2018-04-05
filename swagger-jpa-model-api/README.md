@@ -1,0 +1,2 @@
+#swagger_maven_generation
+#swagger_jpa_model

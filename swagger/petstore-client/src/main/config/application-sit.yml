@@ -1,0 +1,16 @@
+
+---
+spring:
+  profiles: sg1
+petstore:
+  targetUrl: 
+    direct: http://localhost:8081/petstore
+    zuul: http://localhost:10901/petstore;
+
+---
+spring:
+  profiles: sg2
+petstore:
+  targetUrl:
+    direct: http://localhost:8082/petstore
+    zuul: http://localhost:10902/petstore;

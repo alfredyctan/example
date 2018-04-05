@@ -1,0 +1,19 @@
+
+---
+spring:
+  profiles: hk1
+petstore:
+  targetUrl: 
+    direct: http://localhost:8081/petstore
+    zuul: http://localhost:10181/petstore;
+server:
+  host: localhost
+---
+spring:
+  profiles: hk2
+petstore:
+  targetUrl:
+    direct: http://localhost:8082/petstore
+    zuul: http://localhost:10182/petstore;
+server:
+  host: localhost

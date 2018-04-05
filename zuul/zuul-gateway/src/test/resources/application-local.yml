@@ -1,0 +1,41 @@
+spring:
+  profiles: local
+
+server:
+  port: 10901
+
+zuul:
+  routes:
+    localroute:
+      path: /local/**
+      stripPrefix: true
+      url: https://locahost/local
+      secure: false
+
+---
+spring:
+  profiles: lv1
+hazelcast:
+  port: 11221
+  publicAddress: localhost
+
+---
+spring:
+  profiles: lv2
+hazelcast:
+  port: 11222
+  publicAddress: localhost
+
+---
+spring:
+  profiles: dr1
+hazelcast:
+  port: 11223
+  publicAddress: localhost
+
+---
+spring:
+  profiles: dr2
+hazelcast:
+  port: 11224
+  publicAddress: localhost

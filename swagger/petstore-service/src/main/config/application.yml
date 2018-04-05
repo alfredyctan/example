@@ -1,0 +1,11 @@
+server:
+  servlet:
+    contextPath: /petstore
+
+management.endpoints.web.exposure.include: '*'
+
+springfox:
+  documentation:
+    swagger:
+      v2:
+        home: /api/v2/docs

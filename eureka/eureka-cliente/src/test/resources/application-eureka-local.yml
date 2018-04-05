@@ -1,0 +1,27 @@
+spring.profiles: eureka-local
+spring.profiles.include:
+  - eureka
+
+eureka:
+  environment: local
+  client:
+    serviceUrl:
+      lv-default: http://${eureka.lv1.host}:${eureka.lv1.port}/${eureka.lv1.context}/eureka/,http://${eureka.lv2.host}:${eureka.lv2.port}/${eureka.lv2.context}/eureka/
+      dr-default: http://${eureka.dr1.host}:${eureka.dr1.port}/${eureka.dr1.context}/eureka/,http://${eureka.dr2.host}:${eureka.dr2.port}/${eureka.dr2.context}/eureka/
+  lv1:
+    host: localhost
+    port: 20001
+    context: eureka/lv1
+  lv2:
+    host: localhost
+    port: 20002
+    context: eureka/lv2
+  dr1:
+    host: localhost
+    port: 20011
+    context: eureka/dr1
+  dr2:
+    host: localhost
+    port: 20012
+    context: eureka/dr2
+    

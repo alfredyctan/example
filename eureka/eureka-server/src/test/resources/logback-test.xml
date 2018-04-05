@@ -1,0 +1,14 @@
+<configuration>
+	<property name="EXPT_SUPPRESS" value="logger.startsWith(&quot;com.netflix&quot;)" /> 
+	<property name="EXPT_MSG_ONLY" value="logger.startsWith(&quot;com.netflix.eureka.cluster&quot;)" /> 
+
+	<include resource="logback-test-appender.xml" />
+	<include resource="env/${sys.env}/logback-logger.xml" optional="true" />
+
+	<appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+		<appender-ref ref="MAIN" />
+	</appender>
+	<root level="INFO">
+		<appender-ref ref="ASYNC" />
+	</root>
+</configuration>

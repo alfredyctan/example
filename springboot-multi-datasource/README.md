@@ -1,0 +1,11 @@
+#springboot_multiple_datasource
+#JPA_Criteria_API
+#HSQLDB_InMemory
+#test_data_source
+#stream_collect_field_to_list
+#cloud_data_source
+#RunWith
+#SpringJUnit4ClassRunner
+#EnableAutoConfiguration
+#TestPropertySource
+#ContextConfiguration

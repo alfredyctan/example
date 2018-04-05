@@ -1,0 +1,32 @@
+spring:
+  profiles: eureka
+
+eureka:
+  datacenter: afc
+  shouldBatchReplication: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    availabilityZones:
+      lv: lv-default
+      dr: dr-default
+
+---
+spring:
+  profiles: lv
+eureka:
+  client:
+    region: lv
+  instance:
+    metadataMap:
+      zone: lv-default
+
+---
+spring:
+  profiles: dr
+eureka:
+  client:
+    region: dr
+  instance:
+    metadataMap:
+      zone: dr-default

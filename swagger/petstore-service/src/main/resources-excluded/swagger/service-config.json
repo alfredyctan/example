@@ -1,0 +1,8 @@
+{
+	"basePackage": "org.afc.petstore",
+	"apiPackage": "org.afc.petstore.api",
+	"configPackage": "org.afc.petstore.config",
+	"modelPackage": "org.afc.petstore.model",
+	"delegatePattern": "true",
+	"hideGenerationTimestamp": "true"
+}

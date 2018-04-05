@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>aggregator</artifactId>
+	<version>1.0.4-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<parent>
+		<groupId>org.afc</groupId>
+		<artifactId>release</artifactId>
+		<version>1.0.0</version>
+		<relativePath>release</relativePath>
+	</parent>
+	<modules>
+		<module>brother</module>
+		<module>father</module>
+		<module>grandma</module>
+		<module>sister</module>
+	</modules>
+	<scm>
+		<url>https://github.com/alfredyctan/test</url>
+		<connection>scm:git:https://github.com/alfredyctan/afc-release.git</connection>
+		<developerConnection>scm:git:https://github.com/alfredyctan/afc-release.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<inherited>false</inherited>
+				<configuration>
+					<tagNameFormat>release-@{project.version}</tagNameFormat>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

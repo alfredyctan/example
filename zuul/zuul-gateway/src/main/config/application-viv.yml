@@ -1,0 +1,27 @@
+spring:
+  profiles: viv
+
+server:
+  port: 10901
+
+zuul:
+  routes:
+    petstore:
+      path: /petstore/**
+      stripPrefix: false
+      url: https://petstore/petstore/
+      secure: false
+
+---
+spring:
+  profiles: dr1
+hazelcast:
+  port: 11223
+  publicAddress: dr-sitv2-app1
+
+---
+spring:
+  profiles: dr2
+hazelcast:
+  port: 11224
+  publicAddress: dr-sitv2-app2

@@ -1,0 +1,27 @@
+spring:
+  profiles: junit
+
+zuul:
+  routes:
+    unit-test:
+      pattern: /(?everything)/$1/
+
+    unit-test-basic:
+      pattern: /^/\/afc/
+
+    unit-test-capturing-group:
+      pattern: /\/api\/kernel\/(?<version>.*)\/labels\/en/\/api\/legacy\/labels\/zh-en\/$1/
+
+    unit-test-jwt-insecure:
+      path: /jwt/insecure
+      serviceId: i-m-foo
+      secure: false
+
+    unit-test-jwt-secure-service:
+      path: /jwt/secure
+      serviceId: i-m-foo
+
+    unit-test-jwt-secure-endpoint:
+      path: /jwt/secure
+      url: https://somewhere.else/
+

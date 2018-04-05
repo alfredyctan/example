@@ -1,0 +1,75 @@
+example:
+  ws: whitespace indentation is used to denote structure; 
+  t: tab characters are never allowed as indentation.
+  # Comments begin with the number sign (#), 
+  comment: #can start anywhere on a line and continue until the end of the line. 
+#Comments must be separated from other tokens by white space characters.
+#If they appear inside of a string, then they are number sign (#) literals.
+  list:
+    hyphens:
+    - hyphen1
+    - hyphen2
+    - hyphen3
+    brackets: [bracket, bracket, bracket]
+  map:
+    lines: 
+      key1: value1
+      key2: value2
+      key3: value3
+    brackets: 
+      { key1: value1, key2: value2, key3: value3 }
+#    question:
+#    ? - i1
+#      - i2
+#    : list as key
+#    
+#    ? {key1: value1, key2: value2, key3: value3}
+#    : map as key
+#    
+#    ? key with null value
+#    # null value
+#    
+#    ? # null key
+#    : value with null key
+#
+#    ? # null key null value
+  data-type-a:
+    string1: "double quote can escape \n"
+    string2: "single quote no escape"
+  data-type-b:
+    start_date: !!str 2018-03-29
+    floatType: !!float 3
+#    binary: !!binary |
+#      VGVzdA==
+#      eyJzdWIiOiIxMj
+#      M0NTY3ODkwIiwi
+#      bmFtZSI6IkpvaG
+#      4gRG9lIiwiaWF0
+#      IjoxNTE2MjM5MD
+#      Iy
+
+  preserve: |
+    newlines in the 
+
+    scalar are preserved
+  fold: >
+    the newlines between two 
+    
+    non-empty lines are removed
+
+  anchor: &a1
+    text: anchor
+  reference: *a1
+  
+  reserved: '@`'
+  
+---
+stream: second
+
+#optional end of stream 
+... 
+
+#nothing can place here
+
+---
+stream: last 
