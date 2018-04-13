@@ -15,6 +15,7 @@
 		<module>eureka</module>
 		<module>swagger</module>
 		<module>zuul</module>
+		<module>regex</module>
 	</modules>
 	<build>
 		<plugins>
