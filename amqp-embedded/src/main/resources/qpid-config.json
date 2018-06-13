@@ -1,0 +1,78 @@
+{
+	"name": "Embedded Broker",
+	"modelVersion": "7.0",
+	"authenticationproviders": [
+		{
+			"name": "PlainProvider",
+			"type": "Plain",
+			"secureOnlyMechanisms": [],
+			"users": [
+				{
+					"type": "managed",
+					"name": "rabbit",
+					"password": "rabbit"
+				}
+			]
+		}
+	],
+	"ports": [
+		{
+			"name": "AMQP",
+			"port": "${qpid.amqp_port}",
+			"protocols": [
+				"AMQP_0_9",
+				"AMQP_0_9_1",
+				"AMQP_1_0"
+			],
+			"authenticationProvider": "PlainProvider",
+			"virtualhostaliases": [
+				{
+					"name": "nameAlias",
+					"type": "nameAlias"
+				},
+				{
+					"name": "defaultAlias",
+					"type": "defaultAlias"
+				},
+				{
+					"name": "hostnameAlias",
+					"type": "hostnameAlias"
+				}
+			]
+		}
+	],
+	"virtualhostnodes": [
+		{
+			"name": "default",
+			"type": "Memory",
+			"defaultVirtualHostNode": "true",
+			"virtualHostInitialConfiguration": "{\"type\" : \"Memory\",\"name\" : \"default\",\"modelVersion\" : \"7.0\"}"
+		}
+	],
+	"brokerloggers": [
+		{
+			"name": "stdout",
+			"type": "Console",
+			"brokerloginclusionrules": [
+				{
+					"name": "Root",
+					"type": "NameAndLevel",
+					"level": "INFO",
+					"loggerName": "ROOT"
+				},
+				{
+					"name": "Qpid",
+					"type": "NameAndLevel",
+					"level": "WARN",
+					"loggerName": "org.apache.qpid.*"
+				},
+				{
+					"name": "Operational",
+					"type": "NameAndLevel",
+					"level": "ERROR",
+					"loggerName": "qpid.message.*"
+				}
+			]
+		}
+	]
+}
